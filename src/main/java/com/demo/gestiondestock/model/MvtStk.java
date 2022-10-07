@@ -1,14 +1,14 @@
 package com.demo.gestiondestock.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -16,4 +16,8 @@ import javax.persistence.Table;
 @Table(name = "mvtStk")
 //class mouvement de stock
 public class MvtStk extends AbstractEntity{
+
+    @ManyToOne
+    @JoinColumn(name = "idarticle")
+    private Article article;
 }
