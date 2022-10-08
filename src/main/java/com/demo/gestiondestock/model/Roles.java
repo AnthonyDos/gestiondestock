@@ -2,8 +2,7 @@ package com.demo.gestiondestock.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Builder
@@ -14,5 +13,10 @@ import javax.persistence.Table;
 @Table(name = "roles")
 public class Roles extends AbstractEntity{
 
-    private String nom;
+    @Column(name = "rolename")
+    private String roleName;
+
+    @ManyToOne
+    @JoinColumn(name = "idutilisateur")
+    private Utilisateur utilisateur;
 }

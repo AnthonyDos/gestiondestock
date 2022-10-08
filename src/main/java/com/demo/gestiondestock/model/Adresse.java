@@ -27,5 +27,6 @@ public class Adresse {
     @Column(name = "codepostal")
     private String codePostal;
 
+    @Column(name = "pays")
     private String pays;
 }
