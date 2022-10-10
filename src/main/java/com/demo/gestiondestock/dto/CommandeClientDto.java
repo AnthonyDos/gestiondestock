@@ -1,6 +1,6 @@
 package com.demo.gestiondestock.dto;
 
-import com.demo.gestiondestock.model.Client;
+import com.demo.gestiondestock.model.CommandeClient;
 import lombok.Builder;
 import lombok.Data;
 import java.time.Instant;
@@ -16,7 +16,33 @@ public class CommandeClientDto {
 
     private Instant dateCommande;
 
-    private Client client;
+    private ClientDto client;
 
     private List<LigneCommandeClientDto> ligneCommandeClients;
+
+    public static CommandeClientDto fromEntity(CommandeClient commandeClient) {
+        if (commandeClient == null){
+            return null;
+        }
+
+        return CommandeClientDto.builder()
+                .id(commandeClient.getId())
+                .code(commandeClient.getCode())
+                .dateCommande(commandeClient.getDateCommande())
+                .client(ClientDto.fromEntity(commandeClient.getClient()))
+                .build();
+    }
+
+    public static CommandeClient toEntity(CommandeClientDto commandeClientDto) {
+        if (commandeClientDto == null) {
+            return null;
+        }
+
+        CommandeClient commandeClient = new CommandeClient();
+        commandeClient.setId(commandeClientDto.getId());
+        commandeClient.setCode(commandeClientDto.getCode());
+        commandeClient.setDateCommande(commandeClientDto.getDateCommande());
+        commandeClient.setClient(ClientDto.toEntity(commandeClientDto.getClient()));
+        return commandeClient;
+    }
 }
