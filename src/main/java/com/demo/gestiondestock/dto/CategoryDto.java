@@ -41,7 +41,7 @@ public class CategoryDto {
             //todo throw on exception
         }
 
-        //pour puvoir set l'id créer une nouvelle instanciation de category
+        //pour pouvoir set l'id créer une nouvelle instanciation de category
         Category category = new Category();
         category.setId(categoryDto.getId());
         category.setCode(categoryDto.getCode());
