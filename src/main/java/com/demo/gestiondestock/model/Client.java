@@ -32,6 +32,9 @@ public class Client extends AbstractEntity{
     @Column(name = "numtel")
     private String numTel;
 
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
+
     @OneToMany(mappedBy = "client") //OneToMany c'est lorsque l'on part de class ou l on se trouve vers l'autre class ici client
     private List<CommandeClient>commandeClients;
 }
