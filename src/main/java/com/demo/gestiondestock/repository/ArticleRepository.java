@@ -3,7 +3,9 @@ package com.demo.gestiondestock.repository;
 import com.demo.gestiondestock.model.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ArticleRepository  extends JpaRepository<Integer, Article> {
+import java.util.Optional;
 
+public interface ArticleRepository  extends JpaRepository<Article, Integer> {
 
+    Optional<Article> findArticleByCodeArticle(String codeArticle);
 }
