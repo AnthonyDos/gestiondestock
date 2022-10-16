@@ -54,7 +54,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryDto findByCodeCategory(String codeCategory) {
-        if (!StringUtils.hasLength(codeCategory) {
+        if (!StringUtils.hasLength(codeCategory)) {
             log.error("Category code is null");
             return null;
         }
@@ -67,7 +67,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<CategoryDto> findByAll() {
+    public List<CategoryDto> findAll() {
 
         return categoryRepository.findAll().stream()
                 .map(CategoryDto::fromEntity)
