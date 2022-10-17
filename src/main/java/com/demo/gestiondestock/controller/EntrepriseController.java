@@ -1,10 +1,7 @@
 package com.demo.gestiondestock.controller;
 
-import com.demo.gestiondestock.controller.api.ArticleApi;
 import com.demo.gestiondestock.controller.api.EntrepriseApi;
-import com.demo.gestiondestock.dto.ArticleDto;
 import com.demo.gestiondestock.dto.EntrepriseDto;
-import com.demo.gestiondestock.services.ArticleService;
 import com.demo.gestiondestock.services.EntrepriseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;

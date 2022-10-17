@@ -1,6 +1,5 @@
 package com.demo.gestiondestock.repository;
 
-import com.demo.gestiondestock.model.Article;
 import com.demo.gestiondestock.model.Entreprise;
 import org.springframework.data.jpa.repository.JpaRepository;
 

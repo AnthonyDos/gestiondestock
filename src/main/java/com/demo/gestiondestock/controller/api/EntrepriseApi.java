@@ -1,6 +1,5 @@
 package com.demo.gestiondestock.controller.api;
 
-import com.demo.gestiondestock.dto.ArticleDto;
 import com.demo.gestiondestock.dto.EntrepriseDto;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

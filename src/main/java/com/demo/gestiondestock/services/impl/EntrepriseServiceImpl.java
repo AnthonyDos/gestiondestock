@@ -1,16 +1,12 @@
 package com.demo.gestiondestock.services.impl;
 
-import com.demo.gestiondestock.dto.ArticleDto;
 import com.demo.gestiondestock.dto.EntrepriseDto;
 import com.demo.gestiondestock.exception.EntityNotFoundException;
 import com.demo.gestiondestock.exception.ErrorCodes;
 import com.demo.gestiondestock.exception.InvalidEntityException;
-import com.demo.gestiondestock.model.Article;
 import com.demo.gestiondestock.model.Entreprise;
-import com.demo.gestiondestock.repository.ArticleRepository;
 import com.demo.gestiondestock.repository.EntrepriseRepository;
 import com.demo.gestiondestock.services.EntrepriseService;
-import com.demo.gestiondestock.validator.ArticleValidator;
 import com.demo.gestiondestock.validator.EntrepriseValidator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
